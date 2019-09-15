@@ -1,4 +1,9 @@
 {% extends "base.html" %}
+
+{% block title %}
+    | User Dashboard
+{% endblock title %}
+
 {% block content %}
  <section id="showcase-inner" class="py-5 text-white">
     <div class="container">
@@ -32,7 +37,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h2>Welcome John</h2>
+          <h2>Welcome {{user.username|title}}</h2>
           <p>Here are the property listings that you have inquired about</p>
           <table class="table">
             <thead>
