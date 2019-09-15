@@ -27,6 +27,10 @@ class Listing(models.Model):
     is_published = models.BooleanField(default=True)
     list_date = models.DateTimeField(default=datetime.now, blank=True)
 
+
+    class Meta:
+        ordering = ("-list_date",)
+
     def __str__(self):
         return self.title
 
